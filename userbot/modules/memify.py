@@ -1,10 +1,4 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
-# Originally from Dark-Prin3 - X-Tra-Telegram
-# Port to UserBot by @MoveAngel
+# Ported by MVaL
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon import events
@@ -44,7 +38,7 @@ async def mim(event):
     if event.fwd_from:
         return 
     if not event.reply_to_msg_id:
-       await event.edit("`Syntax: reply to an image with .mmf` 'text on top' ; 'text on bottom' ")
+       await event.edit("`Syntax: reply to an image with .mms` 'text on top' ; 'text on bottom' ")
        return
     reply_message = await event.get_reply_message() 
     if not reply_message.media:

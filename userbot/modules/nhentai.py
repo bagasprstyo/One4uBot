@@ -1,8 +1,4 @@
-# Copyright (C) 2020 KeselekPermen69
-#
-# Licensed under the Raphielscape Public License, Version 1.d (the "License");
-# you may not use this file except in compliance with the License.
-#
+#created by @KeselekPermen69
 
 import datetime
 from telethon import events
@@ -15,7 +11,7 @@ from userbot.events import register
 async def _(event):
     if event.fwd_from:
         return
-    link = event.pattern_match.group(1) 
+    link = event.pattern_match.group() 
     chat = "@nHentaiBot"
     await event.edit("```Processing```")
     async with bot.conversation(chat) as conv:
@@ -33,7 +29,6 @@ async def _(event):
              await bot.forward_messages(event.chat_id, response.message)
 
 CMD_HELP.update({
-    "nhentai": 
-    ".nhentai <link / code> \
-        \nUsage: view nhentai in telegra.ph XD\n"
-    })
+"nhentai": 
+".nhentai <link / code> \
+\nUsage: view nhentai in telegra.ph XD\n"})
